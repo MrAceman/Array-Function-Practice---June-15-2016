@@ -53,6 +53,26 @@ var arrayMax = function (items) {
   return max;
 };
 
+//Question 1 using high order function
+
+ var each = function (data, callback){
+   for(var index = 0; index < data.length; index++){
+     var item = data[index];
+     callback(item);
+   };
+ };
+
+ var higherArrayMax = function (items) {
+   var max = null;
+   each(items, function (item) {
+     if (item > max) {max = item;}
+   });
+   return max;
+ }
+
+// console.log(higherArrayMax([1,2,3,4,5,6,3]));
+
+
 // ---------------------------
 // 2. Find longest string
 // ---------------------------
