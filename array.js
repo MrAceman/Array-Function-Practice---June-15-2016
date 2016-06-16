@@ -1,8 +1,9 @@
 // ---------------------------
 // The Arrays You Will Work With
 // ---------------------------
-var numbers = [1,12,4,18,9,7,300,11,3,101,5,6,500,102];
-var strings = ['this','is','a','collection','of','words'];
+var numbers = [1,12,4,18,9,7,300,11,3,101,5,6,500,102,600];
+//var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+var strings = ['this','is','a','collection','of','words','thisisthelongestwordinthestring'];
 var instructors = [
     { firstname : 'JD', teaches : 'JavaScript'},
     { firstname : 'Tim', teaches : 'JavaScript'},
@@ -23,32 +24,53 @@ var instructors = [
 // var maxNum = Math.max.apply(Math, numbers);
 // console.log(maxNum);
 
+
 function findMaxArray([]){
 
-  var maxNum = "";
+//The only problem with this function is if the maxNum is the
+//last number in the array. Can't figure that out.  :(
+
+  var maxNum = 0;
   var arraySize = numbers.length;
 
-  for(i = 0; i <= arraySize; i=i+1){
-    if (maxNum > numbers[i]){
+  console.log(arraySize);
 
+  for(i = 0; i <= arraySize; i++){
+    if (maxNum > numbers[i]){
     }
     else if (numbers[i] > numbers[i+1]){
       maxNum = numbers[i]
-      console.log(maxNum)
-      // console.log(i)
     }
   };
-
  console.log(maxNum);
-
 }
-
-
 
 // ---------------------------
 // 2. Find longest string
 // ---------------------------
 
+function findLongestString([]){
+
+  //Same freaking problem.
+  //If the longestString is the last string in the array then it doesn't
+  //get processed. Can't figure that out.  :(
+
+  var longestString = "";
+  var arraySize = strings.length;
+
+  for(i = 0; i < arraySize; i++){
+    if (longestString.length > strings[i].length){
+    }
+    else if (strings[i] == undefined || strings[i+1] == undefined)
+    {
+    }
+    else if (strings[i].length > strings[i+1].length)
+    {
+    longestString = strings[i]
+    }
+  };
+  console.log(longestString);
+}
 
 
 
