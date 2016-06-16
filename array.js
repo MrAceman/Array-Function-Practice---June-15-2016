@@ -25,25 +25,33 @@ var instructors = [
 // console.log(maxNum);
 
 
-function findMaxArray([]){
+function findMaxArray(items){
 
 //The only problem with this function is if the maxNum is the
 //last number in the array. Can't figure that out.  :(
 
-  var maxNum = 0;
-  var arraySize = numbers.length;
+  var maxNum = null;
+  var arraySize = items.length;
 
   console.log(arraySize);
 
   for(i = 0; i <= arraySize; i++){
-    if (maxNum > numbers[i]){
+    if (maxNum > items[i]){
     }
-    else if (numbers[i] > numbers[i+1]){
-      maxNum = numbers[i]
+    else if (items[i] > items[i+1]){
+      maxNum = items[i]
     }
   };
  console.log(maxNum);
 }
+
+var arrayMax = function (items) {
+  var max = null;
+  for(var index = 0; index < items.length; index++) {
+    if (items[index] > max) {max = items[index]; }
+  };
+  return max;
+};
 
 // ---------------------------
 // 2. Find longest string
@@ -71,7 +79,6 @@ function findLongestString([]){
   };
   console.log(longestString);
 }
-
 
 
 // ---------------------------
